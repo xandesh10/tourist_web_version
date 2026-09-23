@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme{
+    --color-button : #222538;
+    --color-head: #10172a;
+}
+
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
