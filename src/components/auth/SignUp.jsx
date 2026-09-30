@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../../features/LoadingSpinner";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setEmailOnRedux } from "../../redux/action/emailAuthSlice";
 
@@ -217,7 +217,7 @@ function SignUp() {
         <div className="md:col-span-2 flex justify-center mt-4">
           <button
             type="submit"
-            className="bg-button py-3 px-10 rounded-lg text-white cursor-pointer transition-transform duration-200 hover:scale-105"
+            className="bg-head py-3 px-10 rounded-lg text-white cursor-pointer transition-transform duration-200 hover:scale-105"
           >
             Submit
           </button>
@@ -227,6 +227,10 @@ function SignUp() {
       </form>
 
       {loading ? <LoadingSpinner /> : ""}
+
+        <div className="signup-link mt-10 text-button font-inter flex justify-center">
+          <Link to='/login'>Click here to login</Link>
+        </div>
     </div>
   );
 }

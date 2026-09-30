@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../../features/LoadingSpinner";
@@ -128,7 +128,7 @@ function Login() {
       </div>
       <div className="flex flex-col items-center mt-20">
         <div className="header text-center">
-          <h1 className="text-head font-bold text-3xl">Login</h1>
+          <h1 className="text-button font-bold text-3xl">Login</h1>
           <h3 className="font-regular text-gray-500 mt-2">Welcome Back!.</h3>
         </div>
         <div className="form-layout w-100 mt-5">
@@ -156,12 +156,15 @@ function Login() {
               <button
                 type="submit"
                 onClick={()=> {setLoading(true)}}
-                className="w-100 mt-5 text-center text-white font-bold bg-button p-3 w-full outline-none rounded-lg focus:border-blue-500 cursor-pointer"
+                className="w-100 mt-5 text-center text-white font-bold bg-head p-3 w-full outline-none rounded-lg focus:border-blue-500 cursor-pointer"
               >
                 Login
               </button>
             </div>
           </form>
+        </div>
+        <div className="signup-link mt-10 text-button font-inter">
+          <Link to='/signup'>Click here to Create a new account</Link>
         </div>
       </div>
       <ToastContainer/>
